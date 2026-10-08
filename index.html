@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WebTools — Free Online Tools</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="#home" class="logo">
+        Web<span>Tools</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#tools">Tools</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <div class="nav-actions">
+
+        <button id="themeButton" class="icon-button">
+            ☾
+        </button>
+
+        <a href="#tools" class="nav-button">
+            Explore Tools
+        </a>
+
+        <button id="menuButton" class="menu-button">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                FREE ONLINE TOOLS
+            </p>
+
+            <h1>
+                Powerful tools.
+                <span>Simple to use.</span>
+            </h1>
+
+            <p class="hero-description">
+                A collection of fast, simple and free tools
+                for everyday tasks, developers and creators.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#tools" class="primary-button">
+                    Explore Tools
+                </a>
+
+                <a href="#about" class="secondary-button">
+                    Learn More
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TOOLS -->
+
+    <section id="tools" class="tools-section">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                OUR TOOLS
+            </p>
+
+            <h2>
+                Everything you need in one place
+            </h2>
+
+            <p>
+                Select a tool and start using it instantly.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-container">
+
+            <input
+                type="search"
+                id="toolSearch"
+                placeholder="Search tools..."
+            >
+
+        </div>
+
+
+        <!-- TOOL CARDS -->
+
+        <div class="tool-cards" id="toolCards">
+
+
+            <!-- WORD COUNTER -->
+
+            <article
+                class="tool-card"
+                data-name="word counter text"
+            >
+
+                <div class="tool-icon">
+                    W
+                </div>
+
+                <h3>
+                    Word Counter
+                </h3>
+
+                <p>
+                    Count words, characters and sentences
+                    instantly.
+                </p>
+
+                <button
+                    class="tool-button"
+                    data-target="word-tool"
+                >
+                    Open Tool
+                </button>
+
+            </article>
+
+
+            <!-- JSON -->
+
+            <article
+                class="tool-card"
+                data-name="json formatter validator developer"
+            >
+
+                <div class="tool-icon">
+                    { }
+                </div>
+
+                <h3>
+                    JSON Formatter
+                </h3>
+
+                <p>
+                    Format, validate and read JSON data
+                    easily.
+                </p>
+
+                <button
+                    class="tool-button"
+                    data-target="json-tool"
+                >
+                    Open Tool
+                </button>
+
+            </article>
+
+
+            <!-- PASSWORD -->
+
+            <article
+                class="tool-card"
+                data-name="password generator security"
+            >
+
+                <div class="tool-icon">
+                    *
+                </div>
+
+                <h3>
+                    Password Generator
+                </h3>
+
+                <p>
+                    Generate strong random passwords
+                    instantly.
+                </p>
+
+                <button
+                    class="tool-button"
+                    data-target="password-tool"
+                >
+                    Open Tool
+                </button>
+
+            </article>
+
+
+            <!-- IMAGE -->
+
+            <article
+                class="tool-card"
+                data-name="image compressor photo image"
+            >
+
+                <div class="tool-icon">
+                    IMG
+                </div>
+
+                <h3>
+                    Image Compressor
+                </h3>
+
+                <p>
+                    Compress images and reduce file size
+                    directly in your browser.
+                </p>
+
+                <button
+                    class="tool-button"
+                    data-target="image-tool"
+                >
+                    Open Tool
+                </button>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- WORD COUNTER -->
+
+    <section
+        id="word-tool"
+        class="tool-section"
+    >
+
+        <div class="tool-container">
+
+            <p class="eyebrow">
+                WORD COUNTER
+            </p>
+
+            <h2>
+                Count your words
+            </h2>
+
+            <p class="tool-description">
+                Type or paste your text below.
+            </p>
+
+            <textarea
+                id="wordInput"
+                class="large-input"
+                placeholder="Start typing or paste your text here..."
+            ></textarea>
+
+
+            <div class="statistics">
+
+                <div class="stat">
+                    <strong id="wordResult">0</strong>
+                    <span>Words</span>
+                </div>
+
+                <div class="stat">
+                    <strong id="characterResult">0</strong>
+                    <span>Characters</span>
+                </div>
+
+                <div class="stat">
+                    <strong id="sentenceResult">0</strong>
+                    <span>Sentences</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- JSON -->
+
+    <section
+        id="json-tool"
+        class="tool-section alternate"
+    >
+
+        <div class="tool-container">
+
+            <p class="eyebrow">
+                JSON FORMATTER
+            </p>
+
+            <h2>
+                Format your JSON
+            </h2>
+
+            <p class="tool-description">
+                Paste JSON below and format or validate it.
+            </p>
+
+            <textarea
+                id="jsonInput"
+                class="large-input code-input"
+                placeholder='{"name":"Harshit","age":25}'
+            ></textarea>
+
+
+            <div class="button-row">
+
+                <button
+                    id="formatJson"
+                    class="primary-button"
+                >
+                    Format JSON
+                </button>
+
+                <button
+                    id="clearJson"
+                    class="secondary-button"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+
+            <pre
+                id="jsonOutput"
+                class="json-output"
+            ></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- PASSWORD -->
+
+    <section
+        id="password-tool"
+        class="tool-section"
+    >
+
+        <div class="tool-container">
+
+            <p class="eyebrow">
+                PASSWORD GENERATOR
+            </p>
+
+            <h2>
+                Generate a strong password
+            </h2>
+
+            <p class="tool-description">
+                Choose your settings and generate a
+                random password.
+            </p>
+
+
+            <div class="password-display">
+
+                <input
+                    type="text"
+                    id="passwordOutput"
+                    readonly
+                    placeholder="Your password will appear here"
+                >
+
+                <button id="copyPassword">
+                    Copy
+                </button>
+
+            </div>
+
+
+            <div class="password-settings">
+
+                <label>
+                    Password Length:
+                    <strong id="lengthDisplay">16</strong>
+                </label>
+
+                <input
+                    type="range"
+                    id="passwordLength"
+                    min="6"
+                    max="50"
+                    value="16"
+                >
+
+
+                <label class="checkbox">
+                    <input
+                        type="checkbox"
+                        id="useUppercase"
+                        checked
+                    >
+                    Uppercase letters
+                </label>
+
+
+                <label class="checkbox">
+                    <input
+                        type="checkbox"
+                        id="useLowercase"
+                        checked
+                    >
+                    Lowercase letters
+                </label>
+
+
+                <label class="checkbox">
+                    <input
+                        type="checkbox"
+                        id="useNumbers"
+                        checked
+                    >
+                    Numbers
+                </label>
+
+
+                <label class="checkbox">
+                    <input
+                        type="checkbox"
+                        id="useSymbols"
+                        checked
+                    >
+                    Symbols
+                </label>
+
+            </div>
+
+
+            <button
+                id="generatePassword"
+                class="primary-button"
+            >
+                Generate Password
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- IMAGE COMPRESSOR -->
+
+    <section
+        id="image-tool"
+        class="tool-section alternate"
+    >
+
+        <div class="tool-container">
+
+            <p class="eyebrow">
+                IMAGE COMPRESSOR
+            </p>
+
+            <h2>
+                Compress your image
+            </h2>
+
+            <p class="tool-description">
+                Reduce image file size directly in your browser.
+            </p>
+
+
+            <div class="upload-box">
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/*"
+                >
+
+                <p>
+                    Select JPG, PNG or WebP
+                </p>
+
+            </div>
+
+
+            <div
+                id="imagePreviewContainer"
+                class="image-preview-container"
+            >
+
+                <img
+                    id="imagePreview"
+                    alt="Image preview"
+                >
+
+            </div>
+
+
+            <div class="compression-settings">
+
+                <label>
+                    Image Quality:
+                    <strong id="qualityValue">
+                        70%
+                    </strong>
+                </label>
+
+                <input
+                    type="range"
+                    id="qualityRange"
+                    min="10"
+                    max="100"
+                    value="70"
+                >
+
+            </div>
+
+
+            <button
+                id="compressImage"
+                class="primary-button"
+            >
+                Compress Image
+            </button>
+
+
+            <div
+                id="compressionResult"
+                class="compression-result"
+            ></div>
+
+
+            <a
+                id="downloadImage"
+                class="primary-button download-button"
+                download="compressed-image.jpg"
+            >
+                Download Image
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section
+        id="about"
+        class="about-section"
+    >
+
+        <div class="about-container">
+
+            <p class="eyebrow">
+                ABOUT WEBTOOLS
+            </p>
+
+            <h2>
+                Simple. Fast. Useful.
+            </h2>
+
+            <p>
+                WebTools is a collection of browser-based
+                utilities designed to make everyday digital
+                tasks easier.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="logo">
+            Web<span>Tools</span>
+        </div>
+
+        <p>
+            Free online tools for everyone.
+        </p>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 WebTools. All rights reserved.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
